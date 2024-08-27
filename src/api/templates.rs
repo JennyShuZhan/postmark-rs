@@ -2,11 +2,13 @@
 use serde::{Deserialize, Serialize};
 use std::fmt;
 
+mod copy_templates;
 mod create_template;
 mod delete_template;
 mod edit_template;
 mod get_template;
 
+pub use copy_templates::*;
 pub use create_template::*;
 pub use delete_template::*;
 pub use edit_template::*;
