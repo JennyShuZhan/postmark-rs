@@ -9,6 +9,7 @@ use serde::{Deserialize, Serialize};
 
 pub mod bounce;
 pub mod email;
+pub mod server;
 pub mod templates;
 
 /// The body of a email message
