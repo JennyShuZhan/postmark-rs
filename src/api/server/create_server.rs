@@ -1,9 +1,8 @@
 use std::borrow::Cow;
 
+use crate::Endpoint;
 use serde::{Deserialize, Serialize};
 use typed_builder::TypedBuilder;
-
-use crate::Endpoint;
 
 #[derive(Debug, Clone, PartialEq, Serialize, Deserialize, Default)]
 #[serde(rename_all = "PascalCase")]
@@ -13,11 +12,11 @@ pub struct CreateServerRequest {
     pub name: String,
 }
 
-#[derive(Default, Debug, Clone, PartialEq, Serialize, Deserialize)]
+#[derive(Debug, Clone, PartialEq, Serialize, Deserialize)]
 #[serde(rename_all = "PascalCase")]
 pub struct CreateServerResponse {
     #[serde(rename = "ID")]
-    pub id: i32,
+    pub id: isize,
     pub name: String,
     pub api_tokens: Vec<String>,
 }

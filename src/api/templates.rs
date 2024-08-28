@@ -21,6 +21,13 @@ pub enum TemplateType {
     Layout,
 }
 
+#[derive(Debug, Default, Clone, Serialize, Deserialize, PartialEq)]
+pub enum TemplateAction {
+    #[default]
+    Create,
+    Edit,
+}
+
 #[derive(Debug, Clone, Serialize, Deserialize, PartialEq)]
 pub enum TemplateIdOrAlias {
     TemplateId(isize),
